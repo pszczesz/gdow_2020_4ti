@@ -9,7 +9,7 @@
     <?php
         $wybor = true;
         if($wybor){
-            echo "<p style='color:green;'>Wybrano prawdę!!<img src='prawda.png'></p>";
+            echo "<p style='color:green;'>Wybrano prawdę!!<img class='ob' src='prawda.png'></p>";
         }else{
             echo "<p style='color:red;'>Wybrano fałsz!!</p>";
         }
