@@ -7,9 +7,9 @@
 </head>
 <body>
     <?php
-        $wybor = false;
+        $wybor = true;
         if($wybor){
-            echo "<p style='color:green;'>Wybrano prawdę!!</p>";
+            echo "<p style='color:green;'>Wybrano prawdę!!<img src='prawda.png'></p>";
         }else{
             echo "<p style='color:red;'>Wybrano fałsz!!</p>";
         }
