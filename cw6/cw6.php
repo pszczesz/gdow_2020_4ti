@@ -7,6 +7,7 @@
 </head>
 <body>
     <?php
+<<<<<<< HEAD
         $napis = "Żółta łódź podwodna";
         for($i=0;$i<strlen($napis);$i++){
             echo $napis[$i].' ';
@@ -41,6 +42,9 @@
         echo "<p>{$t1}  oraz {$t2} : ".Sklej($t1,$t2).'</p>';
         GenerList(5,'o');
         GenerList(10,'u');
+=======
+
+>>>>>>> e7d07e41b79c524fbf8f303a3b684846bd4d5866
     ?>
 </body>
 </html>
