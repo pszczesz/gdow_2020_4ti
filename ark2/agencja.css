@@ -1,0 +1,10 @@
+#lewy,#prawy{
+    float: left;
+    height: 600px;
+}
+#lewy{
+    width: 40%;
+}
+#prawy{
+   width: 60%
+}
