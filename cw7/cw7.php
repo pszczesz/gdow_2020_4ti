@@ -7,6 +7,10 @@
 </head>
 <body>
     <?php
+    include "functions.php";//dołącza plik i robi skrypt dalej
+  //  include_once "functions.php";//dołacza jeśli nie było wcześniej
+  //  require "functions.php";//dołącza i kończy gdy sie nie uda
+  //  require_once "functions.php";//dołącza gdy nie było i kończy gdy sie nie uda
     $tab1 = [];//tworzenie tablicy
     $tab1[] = 234;  //wypelnianie tablicy...
     $tab1[] = 56;
@@ -18,17 +22,11 @@
         if(is_array($tab1[$i])) print_r($tab1[$i]);
         else echo $tab1[$i].'<br>'; 
     }
-    function Lista(array $dane, $typ='ol'){
-        $html = "<{$typ}>\n";
-        foreach($dane as $wiersz){
-            $html .= "<li>{$wiersz}</li>\n";
-        }
-        $html .= "</{$typ}>\n";
-        return $html;
-    }
+    
     echo "<p>Lista zakupów:</p>";
     echo Lista(["Sól","Mąka","Bułki","Kefir","Ziemniaki"]);
     echo Lista(["Tomasz","Monika","Beata","Franek","Grażyna"],'ul');
+    echo Colors(["biały","żółty","zielony","czerwony"]);
     ?>
 </body>
 </html>
