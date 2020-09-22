@@ -35,21 +35,42 @@
         <h1>KALKULATOR CENY MIESZKANIA</h1>
         <div>
             <label for="">Podaj metraż mieszkania w m<sup>2</sup></label><br>
-            <input type="text">
+            <input type="text" id="metraz">
         </div>
         <div>
             <label for="">Liczba pokoi z zamontowanym okablowaniem sieciowym<sup>2</sup></label>
-            <br><input type="text">
+            <br><input type="text" id='pokoje'>
         </div>
         <div>
-            <input type="checkbox" >Kafelki w łazience?
+            <input type="checkbox" id='kafelki'>Kafelki w łazience?
         </div>
-        <input type="button" value="OBLICZ">
+        <input type="button" value="OBLICZ" id='oblicz'><br>
+        <div id="wynik"></div>
     </div>
     <div id="stopka">
 <p>„Autor strony: XXXXXXX<img src="domek.png" alt="nieruchomości" ></p>
 
 
     </div>
+    <script>
+        window.onload = function(){
+            document.querySelector("#oblicz").onclick = function(){
+                const zaMetr2 = 4000;
+                const siecPokoj = 1000;
+                const kafelki = 2000;
+                let metry2 = parseFloat(document.querySelector("#metraz").value);
+                let ilPokoje = parseInt(document.querySelector("#pokoje").value);
+                let czyKafelki = document.querySelector("#kafelki").checked;
+                console.log(metry2,ilPokoje,czyKafelki);
+                if(isNaN(metry2) || isNaN(ilPokoje)){
+                    document.querySelector("#wynik").innerHTML = "Błędne dane!!!";
+                    return;
+                }
+                let k = czyKafelki ? kafelki : 0;
+                let koszt = zaMetr2*metry2+ilPokoje*siecPokoj +k;
+                document.querySelector("#wynik").innerHTML = "Koszt mieszkania: "+koszt+" zł.";
+            }
+        }
+    </script>
 </body>
 </html>
