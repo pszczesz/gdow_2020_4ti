@@ -26,7 +26,16 @@
     echo "<p>Lista zakupów:</p>";
     echo Lista(["Sól","Mąka","Bułki","Kefir","Ziemniaki"]);
     echo Lista(["Tomasz","Monika","Beata","Franek","Grażyna"],'ul');
-    echo Colors(["biały","żółty","zielony","czerwony"]);
+    echo Colors(["white","yellow","green","red"]);
     ?>
+    <script type="text/javascript">
+        //alert("ffff");
+        window.onload = function(){
+            document.querySelector("#colors").onchange = function(){
+               // alert(this.value);
+                document.body.style.backgroundColor = this.value;
+            }
+        }
+    </script>
 </body>
 </html>
