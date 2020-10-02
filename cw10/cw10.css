@@ -1,0 +1,19 @@
+form{
+    padding: 20px;
+    margin: 100px 150px;
+    text-align: center;
+    border: solid brown 1px;
+    background-color: bisque;
+    border-radius: 10px;
+
+}
+div{margin: 20px;}
+label{display:inline-block;width: 150px;text-align: right;}
+input,select{width: 200px;border-radius: 5px;border:solid brown 1px;padding: 6px;}
+input[type=submit]{
+    margin-left: 155px;
+    padding: 10px;
+    border: none;
+    background-color: brown;
+    border-radius: 5px;
+}
