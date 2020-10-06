@@ -22,7 +22,18 @@
        <div class="form-group">
            <label for="b">podaj wykładnik: </label>
            <input id="b" class="form-control" type="text" name="b">
-       </div>   
+       </div>  
+       <div class="btn-group-toggle" data-toggle="buttons">
+           <label class="form-check">
+               <input type="checkbox" name="wybor[]" value="Wybor1"> Wybor1
+           </label>
+           <label class="form-check">
+               <input type="checkbox" name="wybor[]" value="Wybor2"> Wybor2
+           </label>
+           <label class="form-check">
+               <input type="checkbox" name="wybor[]" value="Wybor3"> Wybor3
+           </label>
+       </div> 
        <button type="submit" class="btn btn-primary">Oblicz</button>
     </form>
     </div>

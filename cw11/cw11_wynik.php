@@ -10,8 +10,9 @@
     <title>Wynik obliczenia</title>
 </head>
 <body>
-    <div class="badge badge-success text-center p-2 bg-success m-3">
+    <div class="container-fluid bg-alert">
     <?php
+    //var_dump($_POST);
     function Potega($podstawa,$wykladnik){
         $wynik = 1;
         for($i=0;$i<$wykladnik;$i++){
@@ -22,8 +23,15 @@
     if(isset($_POST['a'])){
         $a = intval($_POST['a']);
         $b = intval($_POST['b']);
+        $wybory = isset($_POST['wybor'])?$_POST['wybor']:[];
         if($a>0 && $b>0){
             echo $a ." <sup>{$b}</sup> = ".Potega($a,$b);
+            if(count($wybory)>0)
+            {
+                foreach($wybory as $wyb){
+                    echo "<p>wybrano: {$wyb}</p>";
+                }
+            }
         }else{
             echo "Błędne dane!!! <a class='btn btn-primary' href='cw11.php'>Powrót do formularza</a>";
         }
