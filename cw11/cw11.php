@@ -11,10 +11,20 @@
 </head>
 <body>  
     <div class="container-fluid">
-        <section class=" text-center p-2 badge-primary">
+        <section class="text-center p-2 badge-primary">
              Formularz zgłoszeniowy
         </section>
-       <form action="cw11_wynik.php" method="POST"></form>
+       <form action="cw11_wynik.php" method="POST">
+       <div class="form-group">
+           <label for="a">Podaj podstawę: </label>
+           <input id="a" class="form-control" type="text" name="a">
+       </div>    
+       <div class="form-group">
+           <label for="b">podaj wykładnik: </label>
+           <input id="b" class="form-control" type="text" name="b">
+       </div>   
+       <button type="submit" class="btn btn-primary">Oblicz</button>
+    </form>
     </div>
 </body>
 </html>
