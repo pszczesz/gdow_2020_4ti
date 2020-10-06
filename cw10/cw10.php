@@ -31,5 +31,11 @@
         <input type="submit" value="Zapisz">
         </div>
     </form>
+       
+    <script>
+     window.onload = function(){
+            document.querySelector("#dataRejestracji").valueAsDate = new Date();    
+        }   
+    </script>
 </body>
 </html>
