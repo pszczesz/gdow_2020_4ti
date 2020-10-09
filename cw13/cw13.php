@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="cw13.css">
 </head>
 <body>
-    <form method="post">
+    <div class="form">
+          <form method="post">
         <div class="line">
             <label for="imie">Podaj imie</label>
             <input type="text" name="imie" id="imie">
@@ -26,21 +27,45 @@
         </div>
         <div class="line">
             <label for="">Wybierz płeć</label><br>
-             <input type="radio" name="plec" checked=''>Kobieta <br>
-             <input type="radio" name="plec">Mężczyzna <br>
+             <input type="radio" name="plec" checked='' value='Kobieta'>Kobieta <br>
+             <input type="radio" name="plec" value='Mężczyzna'>Mężczyzna <br>
         </div>
         <div class="line"><label for="">Wybierz zainteresowania: </label><br>
-            <input type="checkbox" name="zaint[]" >Muzyka<br>
-            <input type="checkbox" name="zaint[]" >Film<br>
-            <input type="checkbox" name="zaint[]" >Sport<br>
-            <input type="checkbox" name="zaint[]" >Książki<br>
+            <input type="checkbox" name="zaint[]" value='Muzyka'>Muzyka<br>
+            <input type="checkbox" name="zaint[]" value='Film'>Film<br>
+            <input type="checkbox" name="zaint[]" value='Sport'>Sport<br>
+            <input type="checkbox" name="zaint[]" value='Książki'>Książki<br>
         </div>
         <input type="submit" value="Zapisz">
     </form>
-    <div class="wynik">
-        <?php
-        
-        ?>
     </div>
+    <?php
+    if(isset($_POST['imie'])){
+       // var_dump($_POST);
+         echo '<div class="wynik">';
+         $imie = trim($_POST['imie']);   
+         $nazwisko = trim($_POST['nazwisko']);   
+         $klasa = $_POST['klasa'];
+        $plec = $_POST['plec'];
+        if(isset($_POST['zaint'])){
+            $zaint = $_POST['zaint'];
+            $htmlZaint = "<ul>";
+            foreach($zaint as $z){
+                $htmlZaint .= "<li>{$z}</li>\n";
+            }
+            $htmlZaint .= "</ul>\n";
+        }
+        echo "<p>Zarejestrowano nowego kandydata: {$imie} {$nazwisko}</p>\n";
+        echo "<p>Płeć: {$plec} do klasy: {$klasa}</p>";
+        echo isset($htmlZaint)? "Zainteresowania:<br>".$htmlZaint : "";
+         echo '</div> ';
+    }
+   
+    ?>
+    <script>
+        window.onload = function() {
+    document.querySelector(".form").className += " loaded";
+}
+    </script>
 </body>
 </html>

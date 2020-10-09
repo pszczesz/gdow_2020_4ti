@@ -15,3 +15,15 @@ input[type=submit]
     padding: 10px;
     margin: 20px;
 }
+.form{    
+    transition: opacity 3s;
+    opacity: 0;
+    border-radius: 5px;
+    border: solid 1px grey;
+    box-shadow: 5px 5px 4px rgb(183, 218, 183);
+   margin: 20px 60px;
+   padding: 10px;
+}
+.loaded{
+    opacity: 1;
+}
