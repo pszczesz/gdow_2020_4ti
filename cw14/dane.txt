@@ -1,4 +1,0 @@
-Reading ends when length - 1 bytes have been read, or a newline 
-(which is included in the return value), or an EOF (whichever comes first). 
-If no length is specified, it will keep reading from the stream until 
-it reaches the end of the line. 
