@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout 3-kolumnowy ze stopką i nagłówkiem</title>
+    <!-- <link rel="stylesheet" href="cw16_1.css"> -->
+    <link rel="stylesheet" href="cw16_2.css"> 
 </head>
 <body>
     <div id="wrapper">
@@ -11,6 +13,28 @@
         <section id="main">
             <section id="lewy">
                 <!--Tu ma byc tabelka z ramkami-->
+                <table>
+                    <tr>
+                        <td colspan="2">Jakiś tekst w tabelce</td>
+                        
+                        <td>Jakiś tekst w tabelce</td>
+                    </tr>
+                    <tr>
+                        <td>Jakiś tekst w tabelce</td>
+                        <td>Jakiś tekst w tabelce</td>
+                        <td>Jakiś tekst w tabelce</td>
+                    </tr>
+                    <tr>
+                        <td>Jakiś tekst w tabelce</td>
+                        <td>Jakiś tekst w tabelce</td>
+                        <td rowspan="2">Jakiś tekst w tabelce</td>
+                    </tr>
+                    <tr>
+                        <td>Jakiś tekst w tabelce</td>
+                        <td>Jakiś tekst w tabelce</td>
+                       
+                    </tr>
+                </table>
             </section>
             <section id="srodkowy">
                 <div>
@@ -22,6 +46,16 @@
             </section>
             <section id="prawy">
                 <!--Tu ma byc formularz z conajmniej 4 polami input-->
+                <form method="post">
+                    <div class="line"><label for="">sfsfsfsf</label>
+                        <input type="text" name="" id=""></div>
+                    <div class="line"><label for="">sfsfsfsf</label>
+                        <input type="text" name="" id=""></div>
+                    <div class="line"><label for="">sfsfsfsf</label>
+                        <input type="text" name="" id=""></div>
+                    <div class="line"><label for="">sfsfsfsf</label>
+                        <input type="text" name="" id=""></div>
+                </form>
             </section>
         </section>
         <section id="footer">
