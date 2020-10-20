@@ -10,6 +10,7 @@
         input[type=submit]{margin-left: 180px;width: 150px;padding: 10px;}
         table{border-collapse: collapse;margin: 30px;}
         td{padding: 8px;border: solid 1px grey;text-align: right;}
+        tr:hover{font-weight: bold;}
         .wyr{background-color: lightseagreen;}
     </style>
 </head>

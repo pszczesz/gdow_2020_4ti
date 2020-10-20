@@ -4,7 +4,8 @@ function generTab($rows,$cols){
     for($i=1; $i<=$rows; $i++){
         $html .= "<tr>\n";
         for($j=1;$j<=$cols;$j++){
-            $html .= "<td>".($i*$j)."</td>\n";
+            $wyr = $i==1 || $j == 1 ? " class='wyr'":"";
+            $html .= "<td {$wyr}>".($i*$j)."</td>\n";
         }
         $html .= "</tr>\n";
     }
