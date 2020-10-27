@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cw18.css">
+</head>
+<body>
+    <h1>Dodawanie nowego studenta</h1>
+    <form action="addNew.php" method="post">
+        <div class="line">
+            <label for="imie">Podaj imię: </label>
+            <input type="text" name="imie" id="imie">
+        </div>
+        <div class="line">
+            <label for="nazwisko">Podaj nazwisko: </label>
+            <input type="text" name="nazwisko" id="nazwisko">
+        </div>
+        <div class="line">
+            <label for="grupa">Wybierz grupę: </label>
+            <select name="grupa" id="grupa">
+                <option value="1G">1G</option>
+                <option value="1B">1B</option>
+                <option value="1Z">1Z</option>
+                <option value="1T">1T</option>                
+            </select>
+        </div>
+        <div class="line">
+            <label for="wiek">Podaj wiek: </label>
+            <input type="number" name="wiek" id="wiek">
+        </div>
+        <input type="submit" value="Zapisz do bazy danych">
+    </form>
+</body>
+</html>
