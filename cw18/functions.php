@@ -45,3 +45,36 @@ function saveToStudents($imie,$nazwisko,$grupa,$wiek){
     var_dump($result);
     return $result;
 }
+function getAllToAdmin(){
+    $conn = getConnection();
+    if($conn==null) die("Error!!!");
+    $sql = "SELECT * FROM students";
+    $result = $conn->query($sql);
+    echo "<table>\n";  
+    echo "<tr><th>Imię</th><th>Nazwisko</th><th>Grupa</th><th>Wiek</th><th colspan='2'>Zarządzanie studentami</th></tr>\n";
+    while($row=$result->fetch_row()){
+        echo "<tr><td>{$row[1]}</td><td>{$row[2]}</td> "
+           ." <td>{$row[3]}</td> <td class='right'>{$row[4]}</td>".
+           " <td><a href='delete.php?id={$row[0]}'>Usuń</a></td>"
+           ."<td><a href='edit.php?id={$row[0]}'>Edytuj</a></td></tr>\n";      
+    }   
+    echo "</table>\n";   
+    $conn->close();
+}
+function getById($id){
+    $conn = getConnection();
+    if($conn==null) die("ERROR DB");
+    $sql = "SELECT * FROM students WHERE id={$id}";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+    $conn->close();
+    return $row;
+}
+function deleteById($id){
+    $conn = getConnection();
+    if($conn==null) die("ERROR DELETE in DB!!!");
+    $sql = "DELETE FROM students WHERE id={$id}";
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result;
+}

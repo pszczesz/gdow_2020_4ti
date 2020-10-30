@@ -9,20 +9,20 @@
 </head>
 
 <body>
-    <h1>Zajęcia ze studentami</h1>
+    <h1>Zarządzaj studentami</h1>
     <div id="wrapper">
         <div> 
             <?php
                 require "functions.php";
-                getAll();
-                CountAll();
+                getAllToAdmin();
+              //  CountAll();
             ?>
         </div>
         <div>
             <a href="formularz.html">Dodaj nowego studenta</a>
         </div>
         <div>
-            <a href="admin.php">Zarządzaj studentami</a>
+            <a href="cw18.php">Lista studentów</a>
         </div>
     </div>
 
