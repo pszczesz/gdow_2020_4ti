@@ -78,3 +78,25 @@ function deleteById($id){
     $conn->close();
     return $result;
 }
+function showOptions($division){
+    $conn = getConnection();
+    $html = "";
+    if($conn==null) die("ERROR DELETE in DB!!!");
+    $sql = "select DISTINCT students.division from students";
+    $result = $conn->query($sql);
+    while($row = $result->fetch_row()){
+        $checked = $row[0]==trim($division) ? " selected='true'" : "";
+        $html .= "<option value='{$row[0]}' {$checked}>{$row[0]}</option>";
+    }
+    $conn->close();
+    return $html; 
+}
+function updateStudent($id,$firstName,$lastName,$division,$age){
+    $conn = getConnection();
+    if($conn==null) die("ERROR UPDATE in DB!!!");
+    $sql = "UPDATE students SET firstName='{$firstName}',lastName='{$lastName}',"
+            ."division='{$division}',age='{$age}' WHERE id={$id}";
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result;
+}
