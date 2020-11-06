@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formatowanie</title>
     <link rel="stylesheet" href="styl2.css">
 </head>
+
 <body>
     <section id="baner">
         <h1>Formatowanie dokumentów HTML</h1>
@@ -45,7 +47,7 @@
             </tr>
             <tr>
                 <td>wieczór</td>
-             </tr>
+            </tr>
         </table>
     </section>
     <section id="lewy">
@@ -53,22 +55,52 @@
     </section>
     <section id="glowny">
         <p>Podaj rozmiar tekstu w procentach: </p>
-        <input type="number" id="rozmiar">%
+        <input type="number" id="rozmiar">%<span id="errorRozmiar" style="color:red;"></span>
         <p>
             <select id="kroj">
-                <option value="prosty">prosty</option>
-                <option value="kursywa">kursywa</option>
+                <option value="normal">prosty</option>
+                <option value="italic">kursywa</option>
             </select>
         </p>
         <p>Jakim kolorem sformatować tekst? Wybierz przycisk</p>
         <input type="button" id="czerwony">
         <input type="button" id="zielony">
         <input type="button" id="niebieski">
-        <p>To jest przykład paragrafu, który może być dowolnie formatowany przez Java Script</p>
+        <p id="tekst">To jest przykład paragrafu, który może być dowolnie formatowany przez Java Script</p>
     </section>
     <section id="stopka">
         <p>Formatowaniem tekstu zajmował się: <i>XXXXXXXX</i></p>
         <a href="http://formatowanie.pl" target="_blank">Odwiedź także</a>
     </section>
+    <script>
+        function Change() {
+            let roz = parseInt(document.querySelector("#rozmiar").value);
+            if (isNaN(roz)) {
+                document.querySelector("#errorRozmiar").innerHTML = " Podaj rozmiar tekstu";
+            } else { 
+                document.querySelector("#errorRozmiar").innerHTML = "";
+            }
+            let rozmiar = roz+"%"
+            let kroj = document.querySelector("#kroj").value;
+            console.log("rozmiar: " + rozmiar, " kroj: " + kroj);
+            document.querySelector("#tekst").style.fontStyle = kroj;
+            document.querySelector("#tekst").style.fontSize = rozmiar;
+        }
+        window.onload = function () {
+            document.querySelector("#czerwony").onclick = function () {
+                document.querySelector("#tekst").style.color = "red";
+                Change();
+            }
+            document.querySelector("#zielony").onclick = function () {
+                document.querySelector("#tekst").style.color = "green";
+                Change();
+            }
+            document.querySelector("#niebieski").onclick = function () {
+                document.querySelector("#tekst").style.color = "blue";
+                Change();
+            }
+        }
+    </script>
 </body>
+
 </html>

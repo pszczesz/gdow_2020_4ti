@@ -1,0 +1,22 @@
+#baner{
+    font-family: 'Anton';font-size: 80px;
+    font-weight: bold;
+    background-color: coral;
+    height: 150px;
+    padding: 32px;
+    color: darkred;
+    text-transform: capitalize;
+    display: flex;
+    align-content: flex-end;
+}
+#first{width: 80%;}
+body{padding: 0; margin: 0;}
+#wrapper{
+    display: flex;
+}
+nav{width: 300px;height: 500px;margin: 10px;}
+div#main{height: 500px;}
+nav a{text-decoration: none;color: brown;display: inline-block; border: solid brown 1px;
+    border-radius: 5px; padding: 15px; width: 80%;margin-bottom: 5px;}
+nav ul{list-style: none;margin: 0;padding: 0;}
+nav a:hover{background-color: rgb(207, 163, 121);}
