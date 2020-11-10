@@ -19,27 +19,33 @@
             <ul>
                 <li><a href="cw19.php">Lista wycieczek</a></li>
                 <li><a href="">Zarządzaj wycieczkami</a></li>
-                <li><a href="">Inne</a></li>
+                <li><a href="uczestnicyWycieczki.php">Uczestnicy wycieczki</a></li>
                 <li><a href="">Inne2</a></li>
             </ul>
         </nav>
         <div id="main">
-            <?php
-            require "functions.php";
-            if(isset($_POST['imie'])){
-                $imie = trim($_POST['imie']);
-                $nazwisko = trim($_POST['nazwisko']);
-                $wycieczkaid = intval($_POST['wycieczkaid']);
-                if(empty($imie)|| empty($nazwisko)){
-                    header("Location: zapisz.php?id={$wycieczkaid}");
+            <div>
+                <?php
+                require "functions.php";
+                if (isset($_POST['imie'])) {
+                    $imie = trim($_POST['imie']);
+                    $nazwisko = trim($_POST['nazwisko']);
+                    $wycieczkaid = intval($_POST['wycieczkaid']);
+                    if (empty($imie) || empty($nazwisko)) {
+                        header("Location: zapisz.php?id={$wycieczkaid}");
+                    }
+                    echo "dodawanie uczestnika do wycieczki";
+                    $wynik  = insertUczestnik($wycieczkaid, $imie, $nazwisko);
+                    var_dump($wynik);
+                    echo "<div>Dodano uczestnika do wycieczki</div>";
                 }
-                echo "dodawanie uczestnika do wycieczki";
-                //insertUczestnik($wycieczkaid,$imie,$nazwisko);
-            }
-             
-            ?>
+
+                ?>
+            </div>
+            <div>
+              <?php echo  "<a href='uczestnicyWycieczki.php?id={$wycieczkaid}'>Uczestnicy tej wycieczki</a>" ?>
+            </div>
         </div>
-    </div>
 </body>
 
 </html>

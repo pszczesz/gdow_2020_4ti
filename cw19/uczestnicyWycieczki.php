@@ -26,9 +26,13 @@
         <div id="main">
             <?php
             require "functions.php";
-            $dane = getAllWycieczki();
-            //var_dump($dane);
-            echo wycieczkiToTable($dane);
+            if(isset($_GET['id'])){
+                $wycieczkaId = intval($_GET['id']);
+            }else{
+                $wycieczkaId = -1;
+            }
+            $dane = getAllByWycieczka($wycieczkaId);
+            echo wycieczkiByUczestnikToTable($dane);
             ?>
         </div>
     </div>
