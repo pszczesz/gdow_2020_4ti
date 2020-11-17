@@ -18,7 +18,7 @@
         <nav>
             <ul>
                 <li><a href="cw19.php">Lista wycieczek</a></li>
-                <li><a href="">Zarządzaj wycieczkami</a></li>
+                <li><a href="wycieczkiAdmin.php">Zarządzaj wycieczkami</a></li>
                 <li><a href="uczestnicyWycieczki.php">Uczestnicy wycieczki</a></li>
                 <li><a href="">Inne2</a></li>
             </ul>
