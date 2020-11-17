@@ -24,6 +24,21 @@
             </ul>
         </nav>
         <div id="main">
+        <form action="insertWycieczka.php" method="post">
+                    <fieldset>
+                        <legend>Dane wycieczki</legend>
+                        <div class="line"><label for="miejsce">Podaj miejsce: </label>
+                            <input type="text" name="miejsce" id="miejsce" required></div>
+                        <div class="line"><label for="cena">Podaj cenę: </label>
+                            <input type="number" name="cena" id="cena" min="0" max="10000" step="0.01" required> zł</div>
+                            <div class="line"><label for="data">Podaj datę: </label>
+                            <input type="date" name="data" id="data" required ></div>
+                        
+                        <div class="line"><label for=""></label>
+                            <input type="submit" value="Dodaj wycieczkę"></div>
+                    </fieldset>
+
+                </form>
             <?php
            
             ?>

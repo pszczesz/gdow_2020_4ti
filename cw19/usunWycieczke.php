@@ -32,32 +32,38 @@
                 echo "<h3>Usuwanie wycieczki: {$row[1]} w cenie: {$row[2]} zł data: {$row[3]}</h3>";
                 echo "<h4>Ilość uczestników tej wycieczki: " . countUczestnicy($id) . "</h4>";
             }
-            if(isset($_POST['wycieczka'])){
+            if (isset($_POST['wycieczka'])) {
                 $wycieczkaId = intval($_POST['wycieczka']);
                 deleteWycieczka($id);
                 echo "<div>Usunięto wycieczkę i uczestników</div>";
             }
             ?>
             <div>
-            <form id="formConfirm"  method="post">
+                <?php
+                if (!isset($_POST['wycieczka'])) {
 
-                <input type="hidden" name="wycieczka" value='<?php echo $id;?>'>
-                <div class="line">Czy potwierdasz usunięcie wycieczki wraz z jej uczestnikami</div>
-                <div class="line">
-                    <input type="submit" value="TAK">
-                    <input type="reset" value="NIE">
-                </div>
-                
-            </form>
+                ?>
+                    <form id="formConfirm" method="post">
+                        <input type="hidden" name="wycieczka" value='<?php echo $id; ?>'>
+                        <div class="line">Czy potwierdasz usunięcie wycieczki wraz z jej uczestnikami</div>
+                        <div class="line">
+                            <input type="submit" value="TAK">
+                            <input type="reset" value="NIE">
+                        </div>
+
+                    </form>
+                <?php
+                }
+                ?>
             </div>
-           
+
         </div>
     </div>
     <script>
-        window.onload = function(){
-            document.querySelector("#formConfirm").onreset = function(){
+        window.onload = function() {
+            document.querySelector("#formConfirm").onreset = function() {
                 //alert("Anuluj");
-                location.href="wycieczkiAdmin.php";
+                location.href = "wycieczkiAdmin.php";
             }
         }
     </script>

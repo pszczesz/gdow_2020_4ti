@@ -111,3 +111,10 @@ function deleteWycieczka($wycieczkaId){
     $conn->close();
     return $r1 && $r2;
 }
+function insertWycieczka($miejsce,$cena,$data){
+    $conn = getConnection();
+    if($conn==null) return false;
+    $sql = "INSERT INTO wycieczki VALUES(null,'{$miejsce}','{$cena}','{$data}')";
+    $result = $conn->query($sql);
+    return $result;
+}
