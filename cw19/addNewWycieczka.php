@@ -25,16 +25,9 @@
         </nav>
         <div id="main">
             <?php
-            require "functions.php";
-            $dane = getAllWycieczki();
-            //var_dump($dane);
-            echo wycieczkiAdmin($dane);
+           
             ?>
-            <div>
-                <a class="btn1" href="addNewWycieczka.php">Dodaj nową wycieczkę</a>
-            </div>
         </div>
-        
     </div>
 </body>
 

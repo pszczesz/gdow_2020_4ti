@@ -32,7 +32,7 @@ padding: 6px;text-align: center; color: brown;}
 label{display: inline-block;text-align: right;width: 150px;}
 fieldset{border: solid brown 1px;border-radius: 5px;}
 form{color: brown;}
-input[type=submit]{background-color: brown;color: lightsalmon;padding: 6px;border-radius: 4px;width: 150px;
+input[type=submit],input[type=reset]{background-color: brown;color: lightsalmon;padding: 6px;border-radius: 4px;width: 150px;
 border:solid 1px black}
 #main{
     background-image: url("media/jezioro.jpg");
@@ -40,4 +40,7 @@ border:solid 1px black}
     background-repeat: no-repeat;
     width: 100%;
    
+}
+label.info{
+    color:brown;
 }

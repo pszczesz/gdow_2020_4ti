@@ -80,3 +80,34 @@ function wycieczkiByUczestnikToTable(array $dane)
     }
     return $html . "</table>\n";
 }
+function wycieczkiAdmin(array $dane)
+{
+    $html = "<table>\n";
+    $html .= "<tr><th>Lp</th><th>Miejsce wycieczki</th><th>Cena</th><th>Data</th><th></th></tr>\n";
+    $lp = 0;
+    foreach ($dane as $row) {
+        $lp++;
+        $html .= "<tr><td>{$lp}</td><td>{$row[1]}</td><td>{$row[2]}</td><td>{$row[3]}</td>"
+        ."<td><a class='btn1' href='usunWycieczke.php?id={$row[0]}'>Usuń</a> <a class='btn1' href='edytujWycieczke.php?id={$row[0]}'>Edytuj</a></td></tr>\n";
+    }
+    return $html . "</table>\n";
+}
+function countUczestnicy($wycieczkaId){
+    $conn = getConnection();
+    if($conn==null) return;
+    $sql = "SELECT count(*) FROM uczestnicy WHERE wycieczkaId={$wycieczkaId}";
+    $result = $conn->query($sql);
+    $ile = $result->fetch_row()[0];
+    $conn->close();
+    return $ile;
+}
+function deleteWycieczka($wycieczkaId){
+    $conn = getConnection();
+    if($conn==null) return;
+    $sql = "DELETE FROM wycieczki WHERE id={$wycieczkaId}";
+    $sql2 = "DELETE FROM uczestnicy WHERE wycieczkaId={$wycieczkaId}";
+    $r1 = $conn->query($sql);
+    $r2 = $conn->query($sql2);
+    $conn->close();
+    return $r1 && $r2;
+}
