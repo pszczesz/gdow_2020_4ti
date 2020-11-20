@@ -24,7 +24,7 @@ table{border-collapse: collapse;margin: 30px;}
 th,td{border: solid 1px brown;padding: 8px;}
 th{background-color: rgb(175, 128, 113);color: brown;}
 /* tr:hover{background-color: rgb(207, 191, 178);} */
-.btn1{display: inline-block;text-decoration: none;border:solid lightsalmon 2px;border-radius: 4px;width: 180px;
+.btn1{display: inline-block;text-decoration: none;border:solid lightsalmon 2px;border-radius: 4px;width: 150px;
 padding: 6px;text-align: center; color: brown;}
 .btn1:hover{background-color: brown;color: lightsalmon;}
 .info{font-size: 1.2em;font-weight: bold;color: chocolate;margin: 20px 30px;}
@@ -44,3 +44,7 @@ border:solid 1px black}
 label.info{
     color:brown;
 }
+.iluczestnikow{
+    width: 80px;
+}
+.right{text-align: right;}

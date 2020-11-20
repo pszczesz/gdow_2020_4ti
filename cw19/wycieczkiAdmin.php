@@ -27,7 +27,7 @@
             <?php
             require "functions.php";
             $dane = getAllWycieczki();
-            //var_dump($dane);
+           
             echo wycieczkiAdmin($dane);
             ?>
             <div>
