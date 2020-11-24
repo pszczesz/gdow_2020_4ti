@@ -1,0 +1,8 @@
+h1{text-align: center;border-bottom: solid 2px grey;}
+.line{margin: 20px;}
+label{display: inline-block;text-align: right;width: 250px;}
+fieldset{border: solid brown 1px;border-radius: 5px;}
+form{color: brown;}
+input[type=submit],input[type=reset]{background-color: brown;color: lightsalmon;padding: 6px;
+    border-radius: 4px;width: 150px; margin-left: 250px;
+border:solid 1px black}
