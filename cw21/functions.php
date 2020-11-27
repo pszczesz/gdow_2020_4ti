@@ -21,3 +21,15 @@ function reverse($text){
     }
     return $wynik;
 }
+function countAlpha($t){
+    $znakiPL = "ąęłóńćźż";
+    $wynik = 0;
+    $length = mb_strlen($t);
+    for($i=0;$i<$length;$i++){
+        $alpha = mb_strtolower(mb_substr($t,$i,1));
+        if($alpha>='a' && $alpha<='z' || mb_strpos($znakiPL,$alpha)){
+            $wynik++;
+        }
+    }
+    return $wynik;
+}

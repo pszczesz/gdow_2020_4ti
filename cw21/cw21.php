@@ -27,7 +27,9 @@
                         <option value="wstaw">wstaw</option>
                         <option value="odwroc">odwroc</option>
                         <option value="szukaj">szukaj</option>
+                        <option value="znaki">znaki</option>
                         <option value="litery">litery</option>
+                        <option value="wytnij">wytnij</option>
                     </select>
                 </div>
                 <div class="line">
@@ -49,6 +51,21 @@
                         break;
                     case "odwroc":
                         echo "<div>Po odwróceniu tekstu: \"{$text}\": " . reverse($text) . "</div>";
+                        break;
+                    case "szukaj":
+                        $index = mb_strpos($text, $search);
+                        echo $index !== false  ?
+                            "<div>W tekście: \"{$text}\":  znaleziono frazę: \"{$search}\" od indeksu: {$index}</di>"
+                            : "<div>W tesście: \"{$text}\": nie znaleziono frazy: \"{$search}\" </div>";
+                        break;
+                    case "znaki":                        
+                        echo "<div>W tekście: \"{$text}\":  ilość znaków: ".mb_strlen($text)."</di>";
+                        break;
+                    case "litery":                        
+                        echo "<div>W tekście: \"{$text}\":  ilość liter: ".countAlpha($text)."</di>";
+                        break;
+                    case "wytnij":                        
+                        echo "<div>W tekście: \"{$text}\":  ilość liter: ".countAlpha($text)."</di>";
                         break;
                 }
             }

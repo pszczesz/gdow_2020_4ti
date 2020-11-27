@@ -13,4 +13,4 @@ input[type=submit],input[type=reset]{margin-left: 170px;padding: 10px;width: 170
 #wrapper{
     display: flex;flex-direction: row;
 }
-#wynik{width: 50%;border: solid rgb(197, 195, 195) 1px;background-color: darkgrey;padding: 5px;}
+#wynik{width: 50%;border: solid rgb(87, 87, 87) 1px;background-color: rgb(211, 210, 210);padding: 5px;}
