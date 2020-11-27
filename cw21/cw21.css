@@ -1,0 +1,16 @@
+label{display: inline-block;text-align: right;width: 190px;}
+input[type=submit],input[type=reset]{margin-left: 170px;padding: 10px;width: 170px;}
+.line{margin: 20px;}
+
+.right {
+    text-align: right;
+}
+#confirm{
+    border: solid 2px brown;
+    padding: 10px;
+    background-color: lightsalmon;
+}
+#wrapper{
+    display: flex;flex-direction: row;
+}
+#wynik{width: 50%;border: solid rgb(197, 195, 195) 1px;background-color: darkgrey;padding: 5px;}
