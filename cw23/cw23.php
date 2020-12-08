@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+<h1 class="badge-dark text-center p-3 m-4" style="font-variant: small-caps;">Lista wszystkich gier</h1>
     <?php
     require_once "models/Repository.php";
     require_once "GryToHTML.php";
@@ -18,6 +19,7 @@
     ?>
     <div>
         <a class="btn btn-dark btn-lg p-3 m-4" href="cw23_1.php">Kategorie gier</a>
+        <a class="btn btn-dark btn-lg p-3 m-4" href="addNew.php">Dodaj nową grę</a>
     </div>
 </body>
 </html>

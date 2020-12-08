@@ -50,4 +50,13 @@ class Repository{
         $conn->close();
         return $gry;
     }
+    public function saveGra(Gra $g){
+        $conn = $this->getConnection();
+        if($conn==null) return false;
+        $sql = "INSERT INTO gry(nazwa,cena,kategoriaId) VALUES ('{$g->getNazwa()}',{$g->getCena()},{$g->getKategoriaId()})";
+        //echo $sql;
+        $result = $conn->query($sql);
+        $conn->close();
+        return $result;
+    }
 }
