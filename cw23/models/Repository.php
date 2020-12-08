@@ -34,4 +34,20 @@ class Repository{
         $conn->close();
         return $kategorie;
     }
+    public function getAllGryByKat(int $katId=-1):array{
+        $conn = $this->getConnection();
+        if($conn==null) return [];
+        $filter = $katId===-1 ? "" : " WHERE kategoriaId={$katId}";
+        $sql = "SELECT gry.id,gry.nazwa,gry.cena,kategorie.id,kategorie.nazwa,kategorie.opis FROM gry INNER JOIN kategorie "
+              ." on gry.kategoriaId=kategorie.id {$filter}";
+      //  echo $sql;
+     $result = $conn->query($sql);
+        $gry = [];
+        while($row = $result->fetch_row()){
+            $Kat = new Kategoria($row[3],$row[4],$row[5]);
+            $gry[] = new Gra($row[0],$row[1],$row[2],$row[3],$Kat);
+        }
+        $conn->close();
+        return $gry;
+    }
 }

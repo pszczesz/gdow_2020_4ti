@@ -1,16 +1,19 @@
 <?php
+require_once "Kategoria.php";
 class Gra
 {
     private $id;
     private $nazwa;
     private $cena;
     private $kategoriaId;
-    public function __construct($id, $nazwa, $cena, $kategoriaId)
+    private $kategoria = null;
+    public function __construct($id, $nazwa, $cena, $kategoriaId,Kategoria $kategoria=null)
     {
         $this->id = $id;
         $this->nazwa = $nazwa;
         $this->cena = $cena;
         $this->kategoriaId = $kategoriaId;
+        $this->kategoria =$kategoria;
     }
     public function getId()    {
         return $this->id;
@@ -46,5 +49,16 @@ class Gra
    
     public function setKategoriaId($kategoriaId)    {
         $this->kategoriaId = $kategoriaId;
+    }
+
+    public function getKategoria():Kategoria
+    {
+        return $this->kategoria;
+    }
+
+    
+    public function setKategoria(Kategoria $kategoria)
+    {
+        $this->kategoria = $kategoria;
     }
 }
