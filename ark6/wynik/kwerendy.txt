@@ -1,0 +1,13 @@
+zap1:
+SELECT zwierzeta.gatunek,zwierzeta.obraz from zwierzeta WHERE zwierzeta.Gromady_id=4 
+
+zap2:
+SELECT id,Gromady_id,gatunek,wystepowanie FROM zwierzeta WHERE Gromady_id=4 or Gromady_id=5 
+
+zap3:
+SELECT zwierzeta.gatunek,odzywianie.id,odzywianie.rodzaj 
+FROM zwierzeta INNER JOIN odzywianie 
+on zwierzeta.Odzywianie_id=odzywianie.id 
+
+zad4:
+ALTER TABLE odzywianie DROP COLUMN informacja

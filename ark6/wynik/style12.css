@@ -1,0 +1,11 @@
+body{font-family: Verdana, sans-serif;}
+#gorny{display: flex; flex-direction: row;}
+#menu{background-color: sandybrown; height: 120px; width: 60%;}
+#logo{background-color: sienna;color: white;text-align: center;height: 120px;width: 40%;}
+#glowny{display: flex; flex-direction: row;}
+#lewy{background-color: sienna;color: white;height: 700px;width: 60%;}
+#prawy{background-color: sandybrown;height: 700px;width: 40%;}
+#stopka{background-color: #4D1900;color: white;text-align: right;}
+#menu a{display:inline-block; background-color: green;color: yellow;padding: 20px 50px 20px 50px;
+     margin-top: 30px;}
+#menu a:hover{background-color: yellow;color: green;}
