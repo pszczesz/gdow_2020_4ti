@@ -9,7 +9,7 @@
 <body>
     <section id="gorny">
         <section id="menu">
-            <a href="groada-ryby.html">gromada ryb</a>
+            <a href="gromada-ryby.html">gromada ryb</a>
             <a href="gromada-ptaki.html">gromada ptaków</a>            
             <a href="gromada-ssaki.html">gromada ssaków</a>
         </section>
