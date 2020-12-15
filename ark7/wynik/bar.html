@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl2.css">
+    <title>Bar Smaczne Jadło</title>
+</head>
+<body>
+    <section id="baner">
+        <h2>Bar Smaczne Jadło zaprasza serdecznie</h2>
+    </section>
+    <section id="main">
+        <section id="lewy">
+            <h5>Przykładowe menu</h5>
+            <table>
+                <tr>
+                    <td>Zupa Gazpacho</td>
+                    <td>cena: 20 zł</td>
+                </tr>
+                <tr>
+                    <td>Kurczak pieczony</td>
+                    <td>cena: 40 zł</td>
+                </tr>
+            </table>
+        </section>
+        <section id="prawy">
+            <img src="menu.jpg" alt="Smaczne">
+        </section>
+    </section>
+    <section id="dolny">
+        <h3>Chcesz z nami pracować</h3>
+        <form action="rekrutacja.php" method="post">
+            <div>
+                <label for="imie">Imię:</label>
+                <input type="text" name="imie" id="imie">
+            </div>
+            <div>
+                <label for="nazwisko">Nazwisko:</label>
+                <input type="text" name="nazwisko" id="nazwisko">
+            </div>
+            <div>
+                <label for="stanowisko">Stanowisko:</label>
+                <input type="number" name="stanowisko" id="stanowisko">
+                 (1 - kucharz, 2 - pomoc, 3 - kelner, 4 - barman)
+            </div>
+            <div>
+                <input type="reset" value="WYCZYŚĆ">
+                <input type="submit" value="REKRUTUJ">
+            </div>
+        </form>
+    </section>
+    <section id="stopka">
+        Stronę internetową opracował: <b>XXXXXXXXXX</b>
+    </section>
+</body>
+</html>

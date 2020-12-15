@@ -1,0 +1,11 @@
+--Kw1:
+INSERT INTO pracownicy(imie,nazwisko,stanowisko) VALUES("Joanna","Dobrowolska",2);
+
+--kw2:
+SELECT imie,nazwisko FROM pracownicy WHERE stanowisko=3;
+
+--kw3
+SELECT id,nazwa FROM dania where cena<25  and typ=1;
+
+--kw4
+UPDATE dania set cena=cena+1 WHERE typ=4;
